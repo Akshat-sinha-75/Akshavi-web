@@ -88,7 +88,7 @@ function Navbar() {
           top of every other layer — including the footer (z: 100000) and
           the GradualBlur overlay (z: 99999) — so the menu is always
           accessible and never clipped by another stacking context. */}
-      <div className="fixed top-0 left-0 z-[100001] w-full py-5 lg:hidden px-5">
+      <div className={`fixed top-0 left-0 z-[100001] w-full py-5 lg:hidden px-5 transition-all duration-300 ${isScrolled ? 'glass-nav shadow-sm' : ''}`}>
         <div className="flex items-center justify-between w-full font-extrabold">
           <Link
             href="/"
@@ -174,7 +174,7 @@ function Navbar() {
       </div>
 
       {/* Navbar large screen */}
-      <div className="fixed top-0 left-0 w-full px-6 lg:px-20 z-[100001] pointer-events-none">
+      <div className={`fixed top-0 left-0 w-full px-6 lg:px-20 z-[100001] transition-all duration-500 ${isScrolled ? 'glass-nav pointer-events-auto shadow-sm' : 'pointer-events-none'}`}>
         <div className={`items-start justify-between hidden lg:flex transition-all duration-500 ${isScrolled ? 'pt-6 pb-6' : 'pt-14 pb-10'}`}>
           <div className={`tracking-wider font-semibold text-2xl pointer-events-auto transition-opacity duration-300 ${isScrolled ? 'opacity-0' : 'opacity-100'}`} style={{ letterSpacing: "-0.03em" }}>
             <Link href="/" aria-label="Home">AKSHAVI</Link>

@@ -54,6 +54,12 @@ const GithubIcon = () => (
   </Icon>
 );
 
+const ArrowUpIcon = () => (
+  <Icon>
+    <path d="M12 19V5M5 12l7-7 7 7" />
+  </Icon>
+);
+
 const SiteFooter = () => {
   return (
     <footer id="main-footer">
@@ -132,9 +138,16 @@ const SiteFooter = () => {
       </div>
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} AKSHAVI. All rights reserved.</p>
-        <div className="flex gap-4">
+        <div className="flex gap-4 items-center">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>
+          <button 
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            aria-label="Scroll to top"
+            className="ml-4 p-2 bg-transparent text-[var(--color-text-subtle)] hover:text-[var(--color-text)] transition-colors"
+          >
+            <ArrowUpIcon />
+          </button>
         </div>
       </div>
     </footer>

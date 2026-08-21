@@ -87,9 +87,18 @@ const Contact = () => {
   }, []);
 
   const splitChars = (text) =>
-    text.split("").map((char, i) => (
-      <span key={i} className="ct-char" style={{ display: "inline-block" }}>
-        {char === " " ? "\u00A0" : char}
+    text.split(" ").map((word, wordIndex, array) => (
+      <span key={wordIndex} style={{ display: "inline-block", whiteSpace: "nowrap" }}>
+        {word.split("").map((char, charIndex) => (
+          <span key={charIndex} className="ct-char" style={{ display: "inline-block" }}>
+            {char}
+          </span>
+        ))}
+        {wordIndex !== array.length - 1 && (
+          <span className="ct-char" style={{ display: "inline-block" }}>
+            {"\u00A0"}
+          </span>
+        )}
       </span>
     ));
 
@@ -113,17 +122,12 @@ const Contact = () => {
       </a>
 
       <div id="ct-actions" ref={ctaRef}>
-        <a id="ct-btn" href="#">
-          <span>APP STORE</span>
-          <ArrowUpRight />
-        </a>
-        <a
-          id="ct-btn-secondary"
-          href="#"
-          target="_blank"
-          rel="noreferrer"
+        <a 
+          id="ct-btn-secondary" 
+          href="/Akshavi.apk"
+          download="Akshavi.apk"
         >
-          <span>GOOGLE PLAY</span>
+          <span>DOWNLOAD APP</span>
           <ArrowUpRight />
         </a>
       </div>

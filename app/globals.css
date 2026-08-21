@@ -59,9 +59,9 @@
   user-drag: none;
 }
 
-html, body {
+html,
+body {
   overscroll-behavior: none;
-  overflow-x: hidden;
   width: 100%;
   -webkit-tap-highlight-color: transparent;
   -webkit-text-size-adjust: 100%;
@@ -81,51 +81,82 @@ html, body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-img, svg, video {
+img,
+svg,
+video {
   pointer-events: none;
   max-width: 100%;
 }
 
+/* Custom Scrollbar */
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
-  display: none;
+  width: 8px;
+  height: 8px;
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background: var(--color-text-subtle);
+  border-radius: 4px;
+}
+
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
 }
 
 html {
-  scrollbar-width: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-text-subtle) var(--color-bg);
 }
 
-.nav_btn_lg{
+.glass-nav {
+  background-color: color-mix(in srgb, var(--color-bg) 75%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.nav_btn_lg {
   @apply rounded-full px-5 h-10 font-[600] text-sm mx-2 font-AeonikMedium
 }
-.nav_btn_dark{
+
+.nav_btn_dark {
   background-color: var(--color-btn-dark-bg);
   color: var(--color-btn-dark-text);
 }
-.nav_btn_light{
+
+.nav_btn_light {
   color: var(--color-btn-light-text);
   background-color: var(--color-btn-light-bg);
 }
 
-.nav_btn_sm{
+.nav_btn_sm {
   @apply rounded-full w-10 h-10 mx-2;
   background-color: var(--color-btn-sm-bg);
   color: var(--color-btn-light-text);
 }
 
-@font-face{
+@font-face {
   font-family: "Aeonik";
   src: url('/fonts/Aeonik/Aeonik-Regular.otf') format('opentype');
 }
-@font-face{
+
+@font-face {
   font-family: "AeonikBold";
   src: url('/fonts/Aeonik/Aeonik-Bold.otf') format('opentype');
 }
-@font-face{
+
+@font-face {
   font-family: "AeonikMedium";
   src: url('/fonts/Aeonik/Aeonik-Medium.otf') format('opentype');
 }
- 
+
 .container {
   margin: 0 auto;
   width: 250px;
@@ -160,22 +191,27 @@ html {
   transform: rotateX(0deg) translateZ(250px);
   background: #ed1c24;
 }
+
 .b {
   transform: rotateX(60deg) translateZ(250px);
   background: #0072bc;
 }
+
 .c {
   transform: rotateX(120deg) translateZ(250px);
   background: #39b54a;
 }
+
 .d {
   transform: rotateX(180deg) translateZ(250px);
   background: #f26522;
 }
+
 .e {
   transform: rotateX(240deg) translateZ(250px);
   background: #630460;
-} 
+}
+
 .f {
   transform: rotateX(300deg) translateZ(250px);
   background: #8c6239;
@@ -917,7 +953,7 @@ html {
 }
 
 #ct-btn-secondary:hover {
-  background-color: var(--color-accent-soft);
+  background-color: rgb(244, 133, 93);
   border-color: var(--color-accent-soft);
   color: var(--color-text);
   transform: translateY(-2px);
@@ -1090,9 +1126,17 @@ html {
 
 /* ── MOBILE / TABLET ── */
 @media (max-width: 1024px) {
+
   /* Contact — slightly larger eyebrow / button text on tablet */
-  #ct-eyebrow { font-size: 1.4vw; letter-spacing: 0.2em; }
-  #ct-email { font-size: 2vw; }
+  #ct-eyebrow {
+    font-size: 1.4vw;
+    letter-spacing: 0.2em;
+  }
+
+  #ct-email {
+    font-size: 2vw;
+  }
+
   #ct-btn,
   #ct-btn-secondary {
     height: 6vh;
@@ -1102,15 +1146,34 @@ html {
   }
 
   /* Footer — tablet font scaling */
-  .f-logo { font-size: 7vw; }
-  .f-desc { font-size: 1.5vw; }
-  .f-col h3 { font-size: 1.5vw; }
-  .f-col a { font-size: 1.4vw; }
-  .footer-bottom { font-size: 1.2vw; }
-  .f-socials a { width: 4vw; height: 4vw; }
+  .f-logo {
+    font-size: 7vw;
+  }
+
+  .f-desc {
+    font-size: 1.5vw;
+  }
+
+  .f-col h3 {
+    font-size: 1.5vw;
+  }
+
+  .f-col a {
+    font-size: 1.4vw;
+  }
+
+  .footer-bottom {
+    font-size: 1.2vw;
+  }
+
+  .f-socials a {
+    width: 4vw;
+    height: 4vw;
+  }
 }
 
 @media (max-width: 768px) {
+
   /* Loader — tablet size */
   #loader-counter {
     font-size: 13vw;
@@ -1382,6 +1445,7 @@ html {
    Touch targets stay ≥44px, long words break cleanly, and elements
    never exceed the viewport width. */
 @media (max-width: 480px) {
+
   /* Projects — make long names wrap and keep the arrow from being
      squished against the edge. Give each row a minimum touch height. */
   #projects-section {
@@ -1523,4 +1587,3 @@ html {
     transform: none;
   }
 }
-
