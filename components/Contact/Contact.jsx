@@ -124,7 +124,7 @@ const Contact = () => {
       <div id="ct-actions" ref={ctaRef}>
         <a 
           id="ct-btn-secondary" 
-          href="/Akshavi.apk"
+          href="https://expo.dev/artifacts/eas/ZjPdZm6Y3j-IB9JnemVOwQKysBkXXHiW9fRu9CIcvPk.apk"
           download="Akshavi.apk"
         >
           <span>DOWNLOAD APP</span>
