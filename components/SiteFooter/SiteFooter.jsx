@@ -92,7 +92,7 @@ const SiteFooter = () => {
           <div className="f-col">
             <h3>CONTACT</h3>
             <a href="mailto:akshavi75@gmail.com">
-              akshat75@gmail.com
+              akshavi75@gmail.com
             </a>
             <a
               href="https://wa.me/7765859270"
