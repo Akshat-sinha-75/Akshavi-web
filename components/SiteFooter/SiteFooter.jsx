@@ -71,40 +71,9 @@ const SiteFooter = () => {
             Real-time. Always watching. Never sleeping.
           </p>
           <div className="f-socials">
+
             <a
-              href="https://www.instagram.com/elfekkyy/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Instagram"
-            >
-              <InstagramIcon />
-            </a>
-            <a
-              href="https://www.tiktok.com/@elfekkyy"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="TikTok"
-            >
-              <TikTokIcon />
-            </a>
-            <a
-              href="https://www.youtube.com/@Elfekki"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="YouTube"
-            >
-              <YoutubeIcon />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/abdelruhamanelfekky/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn"
-            >
-              <LinkedinIcon />
-            </a>
-            <a
-              href="https://github.com/AbdelruhmanAshraf"
+              href="https://github.com/Akshat-sinha-75/Akshavi-web.git"
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub"
@@ -122,17 +91,17 @@ const SiteFooter = () => {
           </div>
           <div className="f-col">
             <h3>CONTACT</h3>
-            <a href="mailto:support@akshavi.com">
-              support@akshavi.com
+            <a href="mailto:akshavi75@gmail.com">
+              akshat75@gmail.com
             </a>
             <a
-              href="#"
+              href="https://wa.me/7765859270"
               target="_blank"
               rel="noreferrer"
             >
               WhatsApp
             </a>
-            <a href="#">Phone</a>
+
           </div>
         </div>
       </div>
@@ -141,7 +110,7 @@ const SiteFooter = () => {
         <div className="flex gap-4 items-center">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>
-          <button 
+          <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             aria-label="Scroll to top"
             className="ml-4 p-2 bg-transparent text-[var(--color-text-subtle)] hover:text-[var(--color-text)] transition-colors"
