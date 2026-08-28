@@ -160,7 +160,7 @@ function Navbar() {
           <div className="mt-auto pt-8 flex flex-col gap-3">
             <p className="text-fg-muted text-xs tracking-[0.2em] uppercase">Get the app</p>
             <a
-              href="https://expo.dev/artifacts/eas/ZjPdZm6Y3j-IB9JnemVOwQKysBkXXHiW9fRu9CIcvPk.apk"
+              href="https://expo.dev/artifacts/eas/TrbkEWB0nbInbK3Ye-8QQ0YeB9lNHk1Vf4d4oPG6pR8.apk"
               download="Akshavi.apk"
               onClick={() => setMobileOpen(false)}
               className="flex items-center justify-between bg-[var(--color-accent)] text-white rounded-full px-5 py-4 text-sm tracking-[0.2em] font-semibold"

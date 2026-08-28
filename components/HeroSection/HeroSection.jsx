@@ -180,7 +180,7 @@ const HeroSection = () => {
               Intelligent safety infrastructure. <br className="md:hidden" /> Real-time. Always watching.
             </div>
             <a 
-              href="https://expo.dev/artifacts/eas/ZjPdZm6Y3j-IB9JnemVOwQKysBkXXHiW9fRu9CIcvPk.apk" 
+              href="https://expo.dev/artifacts/eas/TrbkEWB0nbInbK3Ye-8QQ0YeB9lNHk1Vf4d4oPG6pR8.apk" 
               download="Akshavi.apk"
               className="mt-8 px-8 py-3 rounded-full font-semibold text-sm tracking-widest uppercase transition-all duration-300 hover:scale-105"
               style={{ 
